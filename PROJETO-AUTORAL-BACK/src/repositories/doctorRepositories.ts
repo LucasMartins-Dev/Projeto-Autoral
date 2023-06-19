@@ -9,13 +9,13 @@ async function findByEmail(email:any) {
   );
 }
 
-async function create({ name, email, password ,specialty,city }:any) {
+async function create({ name, email, password ,specialty }:any) {
   await connectionDb.query(
     `
         INSERT INTO doctors (name, email, password ,specialty,city)
         VALUES ($1, $2, $3, $4, $5)
     `,
-    [name, email, password,specialty,city]
+    [name, email, password,specialty]
   );
 }
 

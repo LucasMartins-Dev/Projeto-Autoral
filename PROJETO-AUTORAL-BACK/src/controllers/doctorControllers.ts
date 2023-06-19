@@ -1,9 +1,9 @@
 import doctorServices from "../services/doctorServices.js";
 
 async function create(req: any, res: any, next: any): Promise<void> {
-  const { name, email, password, specialty, city } = req.body;
+  const { name, email, password, specialty} = req.body;
   try {
-    await doctorServices.create({ name, email, password, specialty, city });
+    await doctorServices.create({ name, email, password, specialty });
     return res.sendStatus(201);
   } catch (err) {
     next(err);
