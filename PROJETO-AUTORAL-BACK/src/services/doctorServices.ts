@@ -8,7 +8,6 @@ interface UserInput {
   email: string;
   password: string;
   specialty: string;
-  city: string;
 }
 
 interface SignInInput {
